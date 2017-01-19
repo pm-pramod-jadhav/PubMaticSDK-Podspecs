@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'PubMatickSDKPod'
+  s.name             = 'PubMatickSDK'
   s.version          = '5.0.1'
   s.summary          = 'A short description of PubMatickSDK-Banner.'
 
@@ -37,21 +37,21 @@ TODO: Add long description of the pod here.
 
   s.frameworks = 'UIKit', 'MapKit', 'MediaPlayer', 'AdSupport'
   #s.dependency 'PubMatickSDK-Core'
-  
+
+
   #s.default_subspec = 'Core'
 
   s.subspec 'Core' do |ss|
-    ss.source_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/Common/**/*','PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/Communicator/**/*'
+    ss.source_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/Common/**/*','PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/Communicator/**/*' 
   end
 
   s.subspec 'BannerAds' do |ss|
     ss.dependency 'PubMatickSDKPod/Core'
     ss.source_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/PMBannerAdView/**/*.{h,m}'
-    ss.header_dir = 'Three20Core'
-    ss.public_header_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/PMBannerAdView/**/*.{h}'
   end
 
   s.subspec 'NativeAds' do |ss|
+    ss.dependency 'PubMatickSDKPod/Core'
     ss.source_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/PMNativeAd/**/*'
     ss.exclude_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/**/{PMMediationResponse,PMNativeAdResponse}.{h,m}'
   end
