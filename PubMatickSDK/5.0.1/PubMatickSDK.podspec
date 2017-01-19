@@ -24,11 +24,11 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/PubMatic'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Pramod Jadhav' => 'jadhav.pramod.a@gmail.com' }
-  s.source           = { :git => 'git@git.pubmatic.com:PubMatic/sdk-ios.git', :branch =>'pre_release_podsupport'}
+  s.author           = { 'PubMatic' =>'hello'}
+  s.source           = { :git => 'git@git.pubmatic.com:PubMatic/sdk-ios.git', :branch =>'pre_release_podspec'}
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '6.0'
 
   
   # s.resource_bundles = {
@@ -53,7 +53,6 @@ TODO: Add long description of the pod here.
   s.subspec 'NativeAds' do |ss|
     ss.dependency 'PubMatickSDK/Core'
     ss.source_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/PMNativeAd/**/*'
-    ss.exclude_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/**/{PMMediationResponse,PMNativeAdResponse}.{h,m}'
   end
 
 end
