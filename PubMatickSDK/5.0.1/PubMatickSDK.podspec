@@ -46,12 +46,12 @@ TODO: Add long description of the pod here.
   end
 
   s.subspec 'BannerAds' do |ss|
-    ss.dependency 'PubMatickSDKPod/Core'
+    ss.dependency 'PubMatickSDK/Core'
     ss.source_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/PMBannerAdView/**/*.{h,m}'
   end
 
   s.subspec 'NativeAds' do |ss|
-    ss.dependency 'PubMatickSDKPod/Core'
+    ss.dependency 'PubMatickSDK/Core'
     ss.source_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/PMNativeAd/**/*'
     ss.exclude_files = 'PubMatic-iOS-SDK/PubMaticSDK/PubMaticSDK/**/{PMMediationResponse,PMNativeAdResponse}.{h,m}'
   end
